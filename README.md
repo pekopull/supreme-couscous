@@ -1,6 +1,7 @@
 # README
 
 初賽與複賽的程式碼大致相同，唯一不同的地方是複賽將初賽訓練好的模型使用新資料繼續訓練，並且微調一部分 Catboost 參數
+複賽模型下載連結: https://drive.google.com/file/d/1K4Ni4cyhhuRS6zyETZckNfALSfCytUlB/view?usp=sharing
 
 如果需要.py格式的檔案可以參考初賽繳交的檔案
 
