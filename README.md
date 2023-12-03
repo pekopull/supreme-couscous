@@ -1,10 +1,13 @@
 # README
 
 初賽與複賽的程式碼大致相同，唯一不同的地方是複賽將初賽訓練好的模型使用新資料繼續訓練，並且微調一部分 Catboost 參數
+
+雖然 iterations 設定 5000，但是因為有設定 early_stopping_rounds 以避免 overfit。實際上訓練到六百多就會停止。使用 CPU 訓練需要大約 20～30 分鐘。考慮到 CPU 訓練較久，early_stopping_rounds 可以降低至 200 左右應該會比較好。
+
 ```
 catboost_params = {
     'iterations': 5000,
-    'eval_metric': 'F1', #MCC, precision, recall f1
+    'eval_metric': 'F1', 
     'early_stopping_rounds': 300,
     'verbose': 20,
     'learning_rate': 0.054,
